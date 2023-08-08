@@ -9,7 +9,7 @@ module.exports = {
      * @param {import('discord.js').Interaction} interaction 
      * @returns 
      */
-    run: (client, interaction) => {
+    run: (_, client) => {
         console.log(chalk.green("Successfully logged in as: " + client.user.username))
     },
 };
