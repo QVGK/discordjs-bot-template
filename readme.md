@@ -1,6 +1,6 @@
 ## DiscordJS 14 Bot Template
 
-This is a DiscordJS 14 bot template with a slash command and event handler. I mainly created this template so I can quickly start when creating Discord bots for my servers.
+This is a DiscordJS 14 bot template with a slash command and event handler. I created this due to TFAGaming's template having things that I didn't need to use. So therefore, I made a more barebones and simplistic version.
 
 - Includes slash command handler.
 - Includes event handler.
