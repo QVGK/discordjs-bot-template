@@ -12,15 +12,16 @@ module.exports = async (client) => {
 
     try {
         console.log(
-            chalk.blue("Started loading application commands...")
+            chalk.blue("Contacting Discord API to register slash commands (this may take a while)...")
         );
 
         await rest.put(Routes.applicationCommands(process.env.CLIENT_ID), {
             body: client.applicationcommandsArray,
         });
 
-        console.log(chalk.blue("Successfully loaded application commands to Discord API."));
+        console.log(chalk.green("Successfully registered slash commands with Discord API."));
     } catch (e) {
-        console.log(chalk.red("Unable to load application commands to Discord API."));
+        // console.log(e) // Used for debugging.
+        console.log(chalk.red("Failed to register slash commands with Discord API."));
     }
 };

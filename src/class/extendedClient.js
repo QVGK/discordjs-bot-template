@@ -4,6 +4,7 @@ const {
     Collection,
     GatewayIntentBits,
     Partials,
+    ActivityType
 } = require("discord.js");
 require("dotenv").config();
 
@@ -30,6 +31,7 @@ module.exports = class extends Client {
             presence: {
                 activities: [
                     {
+                        type: ActivityType.Watching,
                         name: "DiscordJS 14 Bot Template",
                     },
                 ],
@@ -40,9 +42,8 @@ module.exports = class extends Client {
     start = async () => {
         commands(this);
         events(this);
+        deploy(this);
 
         await this.login(process.env.TOKEN);
-
-        deploy(this);
     };
 };

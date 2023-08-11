@@ -1,4 +1,4 @@
-const ExtendedClient = require("../src/class/extendedClient");
+const ExtendedClient = require("../../src/class/extendedClient");
 
 module.exports = {
     event: 'interactionCreate',
